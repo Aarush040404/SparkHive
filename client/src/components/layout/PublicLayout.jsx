@@ -22,11 +22,15 @@ import Contact from '../../pages/Contact';
 import BookConsultation from '../../pages/BookConsultation';
 import Privacy from '../../pages/Privacy';
 import Terms from '../../pages/Terms';
+import { useEffect } from 'react';
 
 export default function PublicLayout() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
-
+useEffect(() => {
+  window.scrollTo(0, 0);
+  console.log('PATH CHANGED:', location.pathname);
+}, [location.pathname]);
   useLenis();
   useCursorGlow();
 

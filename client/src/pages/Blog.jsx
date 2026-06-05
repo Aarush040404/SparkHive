@@ -90,7 +90,9 @@ export default function Blog() {
 
           <div className="grid lg:grid-cols-4 gap-12">
             <div className="lg:col-span-3 grid sm:grid-cols-2 gap-8">
-              {blogs.map((b, i) => (
+            {blogs
+  .filter((b) => b.slug !== featured?.slug)
+  .map((b, i) => (
                 <Reveal key={b.slug} delay={(i % 2) * 0.08}>
                   <Link to={`/blog/${b.slug}`} className="group block">
                     <div className="aspect-video rounded-2xl overflow-hidden mb-4">

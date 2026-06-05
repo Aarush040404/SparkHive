@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SectionHeading from '../ui/SectionHeading';
 import Reveal from '../ui/Reveal';
+import founderImg from '../../assets/founder.jpeg';
 
 const timeline = [
   { year: '2002', title: 'Founded', desc: 'SparkHive begins with a vision for impact-driven marketing.' },
@@ -38,7 +39,7 @@ export default function AboutPreview() {
           <Reveal>
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-glow" data-parallax>
               <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80"
+                src={founderImg}
                 alt="Harleen Gambhir - Founder"
                 className="w-full h-full object-cover"
                 loading="lazy"

@@ -65,6 +65,7 @@ export default function Hero() {
           className="heading-xl mb-6"
         >
           Marketing That Creates{' '}
+          <br />
           <span className="text-gradient">Real Impact</span>
         </motion.h1>
         <motion.p

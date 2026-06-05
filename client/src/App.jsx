@@ -8,10 +8,12 @@ import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminBlogs from './pages/admin/AdminBlogs';
 import BlogEditor from './pages/admin/BlogEditor';
+import ScrollToTop from './components/layout/ScrollToTop';
 
 export default function App() {
   return (
     <AuthProvider>
+      <ScrollToTop />
       <Analytics />
       <Routes>
         <Route path="/admin/login" element={<AdminLogin />} />
