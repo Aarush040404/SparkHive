@@ -1,0 +1,38 @@
+# Render.com Blueprint — SparkHive MERN
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: sparkhive
+    runtime: node
+    plan: free
+    buildCommand: npm run install:all && npm run build
+    startCommand: cd server && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        sync: false
+      - key: API_PUBLIC_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: MAILCHIMP_API_KEY
+        sync: false
+      - key: MAILCHIMP_SERVER_PREFIX
+        sync: false
+      - key: MAILCHIMP_AUDIENCE_ID
+        sync: false
+      - key: CALENDLY_URL
+        sync: false
+      - key: GA_MEASUREMENT_ID
+        sync: false
+      - key: META_PIXEL_ID
+        sync: false
